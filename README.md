@@ -35,7 +35,7 @@ This project uses the Lightning Design system, it is configured in the app.json 
 Current configuration is 2.1.3 of LDS. 
 (FULL DISCLOSURE - I am rubbish with npm, so I can download and save but you will need to manually copy assets around )
 
-Clone this repository then open the terminal.. 
+Clone this repository then open the terminal.. (or actually, maybe better to [fork](https://help.github.com/articles/fork-a-repo/) then clone.. up to you)
 
 I am going to document how I do this using Eclipse. 
 
@@ -73,7 +73,11 @@ This is where it gets easy.. push this button.
 
 Gotta love that!
 
-
+## What's next
+Now you have your working Heroku app you probably have a couple of options on how to push code to it. 
+1) Add a new git remote for your newly created heroku repo and simply git push heroku master
+2) Create your own Github of this project and connect to use [Heroku Pipeline](https://devcenter.heroku.com/articles/pipelines) - much nicer experience 
+3) get busy building an awesome app :) 
 
 
 
