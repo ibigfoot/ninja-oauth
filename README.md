@@ -85,9 +85,9 @@ You should then be up and running, hit https://<your.herokuapp.com>/ and you sho
 
 ## What's next
 Now you have your working Heroku app you probably have a couple of options on how to push code to it. 
-1) Add a new git remote for your newly created heroku repo and simply git push heroku master
-2) Create your own Github of this project and connect to use [Heroku Pipeline](https://devcenter.heroku.com/articles/pipelines) - much nicer experience 
-3) get busy building an awesome app :) 
+- Add a new git remote for your newly created heroku repo and simply git push heroku master
+- Create your own Github of this project and connect to use [Heroku Pipeline](https://devcenter.heroku.com/articles/pipelines) - much nicer experience 
+- get busy building an awesome app :) 
 
 
 
