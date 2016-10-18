@@ -22,16 +22,18 @@ Like any good 12 Factor app, we want to externalise our application configuratio
 | client_id | This Consumer Key value from your connected app | Setup -> Apps -> Your connected app |
 | client_secret | This Consumer Secret value from your connected app | Setup -> Apps -> Your connected app |
 | redirect_uri | This Callback URL value from your connected app | Setup -> Apps -> Your connected app | 
+| REDIS_URL | The url for the configured redis server | Either in your local redis instance (http://localhost:6379 was my default) or will be configured in Heroku with the handy button below |
+| SF_API_VERSION | This is the version number of the Salesforce API you want to use | as of writing the latest was 37.0 (notice there is no 'v' character) |
 
 ##Run Locally
 If you want to run this project locally you will need a local version of Redis (or an accessible version of Redis somewhere)
 
 Clone this repository then open the terminal.. 
 
-If you are an eclipse user 
-```
-mvn eclipse:eclipse
-```
+This project uses the Lightning Design system, it is configured in the app.json so you might want to get the latest version and update. 
+Current configuration is 2.1.3 of LDS. 
+(FULL DISCLOSURE - I am rubbish with npm, so I can download and save but you will need to manually copy assets around )
+
 
 Otherwise, you might just want to run from commandline... 
 ```
