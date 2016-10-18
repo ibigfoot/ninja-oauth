@@ -61,11 +61,19 @@ Set your workspace and maven target of ninja:run
 
 ![Set to Run](/readme-images/configNinjaRun.png "Set ninja:run")
 
-You should see this output 
+You should see this output in the console
+
+![Console Output](/readme-images/outputRunning.png "Expected Output")
+
+## Heroku
+
+This is where it gets easy.. push this button.
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+Gotta love that!
 
 
-
-```
 
 
 
