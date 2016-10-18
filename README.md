@@ -79,7 +79,7 @@ Then configure your app variables (now or later).
 You will probably need to head over to your Salesforce app and update the callback URL to point to the name your Heroku app gets (or you give it).
 Then also update the redirect_uri param here as well. 
 
-You should then be up and running, hit https://<your.herokuapp.com>/ and you should see a simple home page that runs through a simple OAuth process. 
+You should then be up and running, hit https://your.herokuapp.com/ and you should see a simple home page that runs through a simple OAuth process. 
 
 ![Output](/readme-images/output.png "It works!")
 
