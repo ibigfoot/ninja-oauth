@@ -1,5 +1,5 @@
 {
-	"name": "Ninja Web Framework OAuth Template",
+	"name": "Ninja OAuth Template",
 	"description": "A barebones Java Ninja webapp that simply provides OAuth to Salesforce",
 	"keywords": ["java", "oauth", "salesforce", "ninja"],
 	"env": {
