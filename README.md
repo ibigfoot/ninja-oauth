@@ -71,7 +71,7 @@ This is where it gets easy.. push this button.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Gotta love that!
+Gotta love that.. then open up your config vars and fix.. 
 
 ## What's next
 Now you have your working Heroku app you probably have a couple of options on how to push code to it. 
