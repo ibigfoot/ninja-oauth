@@ -71,7 +71,17 @@ This is where it gets easy.. push this button.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-Gotta love that.. then open up your config vars and fix.. 
+Gotta love that, nice and easy. If you haven't logged into Heroku, best do that now.
+Then configure your app variables (now or later).
+
+![App Configuration](/readme-images/configEnvVars.png "App Configuration")
+
+You will probably need to head over to your Salesforce app and update the callback URL to point to the name your Heroku app gets (or you give it).
+Then also update the redirect_uri param here as well. 
+
+You should then be up and running, hit https://<your.herokuapp.com>/ and you should see a simple home page that runs through a simple OAuth process. 
+
+![Output](/readme-images/output.png "It works!")
 
 ## What's next
 Now you have your working Heroku app you probably have a couple of options on how to push code to it. 
