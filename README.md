@@ -46,7 +46,7 @@ I am going to document how I do this using Eclipse.
 
 ```
 Open Eclipse and Import the existing project into your workspace.
-[[/readme-images/importProject.png|alt=Import Project]]
+![Import Project](/readme-images/importProject.png "Import Project")
 
 Now create a new run configuration
 
