@@ -46,9 +46,23 @@ I am going to document how I do this using Eclipse.
 
 ```
 Open Eclipse and Import the existing project into your workspace.
+
 ![Import Project](/readme-images/importProject.png "Import Project")
 
 Now create a new run configuration
+
+![New Run Configuration](/readme-images/newRunConfiguration.png "New Remote Config")
+
+Configure your environment variables
+
+![Env Variables](/readme-images/configEnvVariables.png "Configure Environment")
+
+Set your workspace and maven target of ninja:run 
+
+![Set to Run](/readme-images/configNinjaRun.png "Set ninja:run")
+
+You should see this output 
+
 
 
 ```
