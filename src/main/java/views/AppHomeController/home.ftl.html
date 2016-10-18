@@ -1,0 +1,62 @@
+<#import "../layout/defaultLayout.ftl.html" as layout> 
+<@layout.myLayout "App Home page">    
+
+<div>
+	<a id="toolingAPIBtn" href="#"><button class="slds-button">Tooling</button></a>
+</div>
+<div>
+<div id="sessionDetailHeader">Session Details</div>
+	<div id="sessionDetail" style="display:none">
+		Signature ${signature}<br />
+		Timezone ${timezone}<br />
+		Instance URL ${instance_url}<br />
+		Last Modified Date ${last_modified_date}<br />
+		Address Zip ${addr_zip}<br />
+		Language ${language}<br />
+		Token Type ${token_type}<br />
+		Locale ${locale}<br />
+		Issued At ${issued_at}<br />
+		Photos <br />
+		Thumbnail <img src="${photos.thumbnail}?oauth_token=${access_token}" />
+		Picture <img src="${photos.picture}?oauth_token=${access_token}" />
+		<hr />
+		Address Street ${addr_street} <br />
+		URLS <br />
+		Rest - ${urls.rest} <br />
+		Metadata - ${urls.metadata} <br />
+		Enterprise - ${urls.enterprise} <br />
+		Query - ${urls.query} <br />
+		Profile - ${urls.profile} <br />
+		Groups - ${urls.groups} <br />
+		Partner - ${urls.partner} <br />
+		Feeds - ${urls.feeds} <br />
+		SObjects - ${urls.sobjects} <br />
+		Feed Items - ${urls.feed_items} <br />
+		Recent - ${urls.recent} <br />
+		Custom Domain - ${urls.custom_domain} <br />
+		<hr />
+		User Type - ${user_type} <br />
+		Scope - ${scope}<br />
+		ID - ${id} <br />
+		First Name - ${first_name} <br />
+		Email - ${email} <br />
+		Email Verified - ${email_verified?c} <br />
+		UTC Offset - ${utcOffset} <br />
+		ID Token - ${id_token}
+		Last Name - ${last_name} <br />
+		Active - ${active?c} <br />
+		Display Name - ${display_name} <br />
+		Access Token - ${access_token} <br />
+		Address State - ${addr_state} <br />
+		Asserted User - ${asserted_user?c} <br />
+		User Id - ${user_id} <br />
+		Org Id - ${organization_id} <br />
+		Nick Name - ${nick_name} <br />
+		Address City - ${addr_city} <br />
+		Mobile Phone Verified - ${mobile_phone_verified?c} <br />
+		Address Country - ${addr_country} <br />
+		Username - ${username}  <br />
+	</div>
+</div>
+
+</@layout.myLayout>

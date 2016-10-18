@@ -1,0 +1,9 @@
+<#import "../layout/defaultLayout.ftl.html" as layout> 
+<@layout.myLayout "App Home page">    
+
+
+<h1>${i18n("hello.world")}</h1>
+<p>App Home and we should try for some session stuff now</p>
+${access_token} <br />
+${photos.thumbnail}
+</@layout.myLayout>

@@ -1,0 +1,38 @@
+{
+  "name": "Spark OAuth Template",
+  "description": "A barebones Java Ninja webapp that simply provides OAuth to Salesforce",
+  "keywords": ["java", "oauth", "salesforce", "ninja"],
+  "env": {
+    "client_id": {
+      "description": "OAuth client id from Identity Provider. ",
+      "value": "<YOUR VALUE HERE>"
+    },
+    "client_secret": {
+      "description": "OAuth client secret from IdP",
+      "value": "<YOUR VALUE HERE>"
+    },
+    "redirect_uri": {
+      "description": "OAuth redirect URI from IdP",
+      "value": "<YOUR VALUE HERE>"
+    },
+    "application.secret" : {
+    	"description" : "Secret encryption key for protecting Ninja client sessions",
+    	"value" : "Your super secret encryption key here"
+    },
+    "SF_API_VERSION" : {
+    	"description" : "The version of the Salesforce API you want to use. (e.g. 37.0)",
+    	"value" : "37.0"
+    },
+  },
+  "addons": [
+    {
+      "plan": "heroku-redis:hobby-dev"
+    },
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "9.5"
+      }
+    }
+  ],
+}

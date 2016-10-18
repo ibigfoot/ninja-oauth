@@ -1,0 +1,49 @@
+
+<div class="slds-global-header slds-grid slds-grid--align-spread " style="min-height: 7em;">
+	<div class="slds-col slds-size--1-of-6 slds-global-header__item">
+		<div class="slds-global-header__logo">
+			<a href="/"><img src="https://secure.sfdcstatic.com/common/assets/img/logo-company.png" alt="" /></a>
+		</div>
+	</div>
+	<div class="slds-col slds-size--4-of-6 slds-global-header__item slds-align--absolute-center slds-text-heading--large">
+		${i18n("appHome.header.title")}
+	</div>
+	<div class="slds-col slds-size--1-of-6 slds-global-header__item slds-m-horizontal--x-large">
+		<#if !access_token??>
+			<div id="logonButtons" class="slds-m-top--large">
+				<a href="/oauth/prod"><button class="slds-button slds-button--neutral">Production</button></a>
+				<a href="/oauth/sandbox"><button class="slds-button slds-button--neutral">Sandbox</button></a>
+			</div>
+			<div id="custom_domain_elements" class="slds-form-element" style="display:none">
+				<label class="slds-form-element__label" for="custom_domain_input">${i18n("header.custom.domain.textbox.label")}</label>
+				<div class="slds-form-element__control">
+					<input id="custom_domain_input" class="slds-input" type="text" placeholder="<<your>>.my.salesforce.com" />
+				</div>
+			</div>
+			<div class="slds-form-element slds-m-top--x-small">
+				<div class="slds-form-element__control">
+					<span class="slds-checkbox">
+						<input type="checkbox" name="custom_domain" id="custom_domain" />
+						<label class="slds-checkbox__label" for="custom_domain">
+							<span class="slds-checkbox--faux"></span>
+							<span class="slds-form-element__label">${i18n("header.custom.domain.checkbox.label")}</span>
+							<button id="custom_domain_logon" class="slds-button" style="display:none">Logon</button>
+						</label>
+					</span>
+				</div>
+			</div>
+		</#if>
+		<#if access_token??>
+			<div class="slds-media ">
+				<div class="slds-media__body slds-p-top--xx-small">
+	    			${display_name}<br />
+	    			${username}<br />
+	    			<a href="/logout"><button class="slds-button">Logout</button></a>
+	  			</div>
+	  			<div class="slds-media__figure--reverse">
+	    			<span class="slds-avatar slds-avatar--circle"><img src="${photos.thumbnail}?oauth_token=${access_token}" alt="${display_name}" /></span> 
+	  			</div>
+			</div>
+		</#if>
+	</div>
+</div>
