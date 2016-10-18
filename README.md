@@ -1,7 +1,7 @@
 
 #Ninja OAuth Template
 
-This is a starting framework for using a [Ninja Web Framework](http://www.ninjaframework.org/) application, on [https://www.heroku.com](Heroku) that is ready to OAuth into a [https://www.salesforce.com](Salesforce) instance. 
+This is a starting framework for using a [Ninja Web Framework](http://www.ninjaframework.org/) application, on [Herok](https://www.heroku.com) that is ready to OAuth into a [Salesforce](https://www.salesforce.com) instance. 
 It also has a dependency on [http://redis.io/](Redis) to handle some session stuff.  
 
 ## Get Started
@@ -9,7 +9,7 @@ As this kind of relies on Salesforce as an Identity Provider you probably need t
 
 For mine, I have a troy@project.local and a troy@project.org set of user names so I configure the OAuth twice... 
 
-Details on how to configure a [https://help.salesforce.com/HTViewHelpDoc?id=connected_app_create.htm](Connected App) for Salesforce, however if you haven't read [https://developer.salesforce.com/page/Digging_Deeper_into_OAuth_2.0_on_Force.com](this developerforce post) on OAuth yet, I suggest you start there.  
+Details on how to configure a [Connected App](https://help.salesforce.com/HTViewHelpDoc?id=connected_app_create.htm) for Salesforce, however if you haven't read [this DeveloperForce post](https://developer.salesforce.com/page/Digging_Deeper_into_OAuth_2.0_on_Force.com) on OAuth yet, I suggest you start there.  
 
 From here we assume you have configured an OAuth environment to work with.
 
@@ -18,7 +18,7 @@ Like any good 12 Factor app, we want to externalise our application configuratio
 
 | Variable | Purpose | Where to find it |
 | -------- | ------- | ---------------- |
-| application.secret | Part of the Ninja Framework in-built security | [http://www.ninjaframework.org/documentation/security/getting_started.html](Ninja Docs) |
+| application.secret | Part of the Ninja Framework in-built security | [Ninja Docs](http://www.ninjaframework.org/documentation/security/getting_started.html) |
 | client_id | This Consumer Key value from your connected app | Setup -> Apps -> Your connected app |
 | client_secret | This Consumer Secret value from your connected app | Setup -> Apps -> Your connected app |
 | redirect_uri | This Callback URL value from your connected app | Setup -> Apps -> Your connected app | 
