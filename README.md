@@ -25,17 +25,32 @@ Like any good 12 Factor app, we want to externalise our application configuratio
 | REDIS_URL | The url for the configured redis server | Either in your local redis instance (http://localhost:6379 was my default) or will be configured in Heroku with the handy button below |
 | SF_API_VERSION | This is the version number of the Salesforce API you want to use | as of writing the latest was 37.0 (notice there is no 'v' character) |
 
+When you deploy using the Heroku button these variables will be created for you but you will need to populate the OAuth ones with your values to get this to work. 
+When deploying locally, you need to set these on the environment so they can be accessed via a `System.getenv("property.name")` call. It's actually a little nicer than this using Ninja, you can [inject your properites file](http://www.ninjaframework.org/documentation/configuration_and_modes.html) and forget about it. Check out the cont/application.conf file in the codebase to see how the properties map.  
+
 ##Run Locally
 If you want to run this project locally you will need a local version of Redis (or an accessible version of Redis somewhere)
-
-Clone this repository then open the terminal.. 
 
 This project uses the Lightning Design system, it is configured in the app.json so you might want to get the latest version and update. 
 Current configuration is 2.1.3 of LDS. 
 (FULL DISCLOSURE - I am rubbish with npm, so I can download and save but you will need to manually copy assets around )
 
+Clone this repository then open the terminal.. 
 
-Otherwise, you might just want to run from commandline... 
+I am going to document how I do this using Eclipse. 
+
+```
+> git clone https://github.com/ibigfoot/ninja-oauth.git
+
+> mvn eclipse:eclipse
+
+```
+Open Eclipse and Import the existing project into your workspace.
+[[readme-images/importProject.png|alt=Import Project]]
+
+Now create a new run configuration
+
+
 ```
 
 
