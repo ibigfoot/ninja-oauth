@@ -9,14 +9,14 @@
 	<!-- replace "jar" with "war" and -->
 	<!-- comment ninja-standalone dependency and -->
 	<!-- uncomment the dependency for ninja-servlet -->
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 	<groupId>com.force.uk</groupId>
 	<version>0.1-SNAPSHOT</version>
 
 	<properties>
 		<ninja.version>5.8.0</ninja.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<jetty.version>9.2.10.v20150310</jetty.version>
+		<jetty.version>9.3.11.v20160721</jetty.version>
 	</properties>
 
 	<build>
@@ -31,6 +31,32 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			
+			<plugin>
+				<groupId>org.eclipse.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jetty.version}</version>
+				<configuration>
+					<contextPath>/</contextPath>
+					<stopKey>stop</stopKey>
+					<stopPort>8889</stopPort>
+					<scanIntervalSeconds>1</scanIntervalSeconds>
+					<reload>automatic</reload>
+					<scanTargetPatterns>
+						<scanTargetPattern>
+							<directory>target/classes</directory>
+							<includes>
+								<include>**/*</include>
+							</includes>
+							<excludes>
+								<exclude>**/*.ftl.html</exclude>
+								<exclude>assets/**</exclude>
+							</excludes>
+						</scanTargetPattern>
+					</scanTargetPatterns>
+				</configuration>
+			</plugin>			
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
@@ -54,50 +80,21 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>org.eclipse.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>${jetty.version}</version>
-				<configuration>
-					<contextPath>/</contextPath>
-					<stopKey>stop</stopKey>
-					<stopPort>8889</stopPort>
-					<scanIntervalSeconds>1</scanIntervalSeconds>
-					<reload>automatic</reload>
-					<scanTargetPatterns>
-						<scanTargetPattern>
-							<directory>target/classes</directory>
-							<includes>
-								<include>**/*</include>
-							</includes>
-							<excludes>
-								<exclude>**/*.ftl.html</exclude>
-								<exclude>assets/**</exclude>
-							</excludes>
-						</scanTargetPattern>
-					</scanTargetPatterns>
-					<systemProperties>
-						<systemProperty>
-							<name>ninja.mode</name>
-							<value>dev</value>
-						</systemProperty>
-					</systemProperties>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jar-plugin</artifactId>
-				<version>3.0.2</version>
-				<configuration>
-					<archive>
-						<manifest>
-							<addClasspath>true</addClasspath>
-							<classpathPrefix>lib/</classpathPrefix>
-							<mainClass>ninja.standalone.AutoStandalone</mainClass>
-						</manifest>
-					</archive>
-				</configuration>
-			</plugin>
+
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-jar-plugin</artifactId> -->
+<!-- 				<version>3.0.2</version> -->
+<!-- 				<configuration> -->
+<!-- 					<archive> -->
+<!-- 						<manifest> -->
+<!-- 							<addClasspath>true</addClasspath> -->
+<!-- 							<classpathPrefix>lib/</classpathPrefix> -->
+<!-- 							<mainClass>ninja.standalone.AutoStandalone</mainClass> -->
+<!-- 						</manifest> -->
+<!-- 					</archive> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
@@ -113,7 +110,7 @@
 								<artifactItem>
 									<groupId>org.eclipse.jetty</groupId>
 									<artifactId>jetty-runner</artifactId>
-									<version>9.2.19.v20160908</version>
+									<version>9.3.13.v20161014</version>
 									<destFileName>jetty-runner.jar</destFileName>
 								</artifactItem>
 							</artifactItems>
