@@ -64,13 +64,12 @@ public class ApiControllerDocTesterTest extends NinjaDocTester {
                 Request.GET().url(
                         testServerUrl().path(URL_INDEX)));
 
-        assertThat(response.payload, containsString("Org Documenter"));
+        assertThat(response.payload, containsString("Ninja Template"));
         assertThat(response.payload, containsString("this is straight from the properties file"));
 
 
     }
     
-    /* TODO - figure out why this is failing in test? Seemed to happen following intro of redis and neo4j
     @Test
     public void testGetHelloWorldJson() {
     
@@ -86,5 +85,5 @@ public class ApiControllerDocTesterTest extends NinjaDocTester {
 
     
     }
-*/
+
 }
